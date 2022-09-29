@@ -12,9 +12,6 @@ BMRvBM.lm <- lm(O2ConsRateLowestBMR~AvgBodyMass,bats)
 bats%>%
   ggplot(aes(x=AvgBodyMass,y=O2ConsRateLowestBMR,col=Colony))+geom_point()+geom_smooth(method="lm")
 
-bats%>%
-  ggplot(aes(x=AvgBodyMass,y=O2ConsRateLowestBMR,col=Colony))+geom_point()+geom_smooth()
-
 
 bats %>% 
   ggplot(aes(Colony,AvgBodyMass))+geom_boxplot()
@@ -26,7 +23,7 @@ emmeans(XXX)
 
 bats2 <- bats%>%
   mutate(logO2=log(O2ConsRateLowestBMR),logBM=log(AvgBodyMass))%>%
-  select(logO2,Colony,logBM,WingScore,ReproStage2,AvgWbcMl)%>%
+  select(logO2,Colony,logBM,WingScore,ReproStage2,AvgWbcMl,BleedHandleTime)%>%
   na.omit()
   
 
@@ -36,16 +33,22 @@ bats2%>%
 
 #linear model
 
-fit1 <- lm(logO2~logBM*Colony,bats)
+fit1 <- lm(logO2~logBM*Colony,bats2)
 
-fit2 <- lm(logO2~Colony,bats)
-anova(fit2)
+fit2 <- lm(logO2~Colony,bats2)
+
+AIC(fit1,fit2)
 
 options(na.action="na.fail")
-big.fit <- glm(logO2~logBM*WingScore*ReproStage2*AvgWbcMl,data=bats2)
+big.fit <- lm(logO2~logBM*WingScore*ReproStage2*AvgWbcMl,data=bats2)
 
 
 big.dr <- big.fit%>%
   dredge()
 
-get.models(big.dr,subset = weight>.1)
+best.mod <- get.models(big.dr,subset = weight>.1)
+
+lapply(best.mod,summary)
+
+
+
