@@ -1,0 +1,19 @@
+---
+title: "Questions"
+author: "Prof. Kenaley & Rachel"
+date: "2023-01-30"
+output: html_document
+---
+
+## Questions
+
+
+1. How have shape characteristics important to flight evolved in the lepidoptera?
+  -Pros: Big question, covers entire group
+  -Cons: Too broad, not nec. mechanistic.
+  
+2. Have have shape characteristics affected speciation?
+  -Pros: Mechanistic---what's driven evolution? Cool to lots of lep fols
+  -Cons: Just 200 representatives of a huge group. Need lots of caveats and could preliminary
+  
+3. 
