@@ -9,7 +9,9 @@ output: html_document
 
 
 1. How have shape characteristics important to flight evolved in the lepidoptera?
-  
+  Differences in AR and 2nd moment area?
+  Certain wing shapes more suited to flapping flight vs gliding flight?
+  Can evolution of shape characteristics be explained by mechanical/functional reasons? (Or is shape influenced by other factors like sexual selection and behavior?)
   
   -Pros: Big question, covers entire group
   -Cons: Too broad, not nec. mechanistic.
@@ -19,9 +21,10 @@ output: html_document
       Behavioral differences (migratory or defending one territory)? 
       Flying to escape predators/courtship?
       
-  -Pros: Mechanistic---what's driven evolution? Cool to lots of lep folks
+  -Pros: Mechanistic---what has driven evolution? Cool to lots of lep folks
   -Cons: Just 200 representatives of a huge group. Need lots of caveats and could be preliminary
   
 3. Why are there differences in fore and hindwing evolution? How are the two wings integrated in flight behavior and mechanics?
 
-4. 
+  -Pros: Narrow question, most studies don't mention fore and hindwing differences
+  -Cons: Not a big enough question for entrie project
